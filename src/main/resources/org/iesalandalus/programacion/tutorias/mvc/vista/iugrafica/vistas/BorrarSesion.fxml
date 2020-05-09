@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorBorrarSesion">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <GridPane hgap="10.0" prefHeight="385.0" prefWidth="660.0" vgap="10.0">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Tutoría" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Sesión" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Profesor" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Label style="-fx-font-weight: bold;" text="Nombre Tutoría:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label fx:id="lbNombreTutoria" prefHeight="16.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label style="-fx-font-weight: bold;" text="Nombre Profesor:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label fx:id="lbNombreProfesor" prefHeight="16.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label style="-fx-font-weight: bold;" text="DNI:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label style="-fx-font-weight: bold;" text="Correo:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label fx:id="lbDni" prefHeight="16.0" prefWidth="225.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="lbCorreo" prefHeight="16.0" prefWidth="251.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label style="-fx-font-weight: bold;" text="Fecha:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Label fx:id="lbFecha" prefHeight="16.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label style="-fx-font-weight: bold;" text="Hora de Inicio:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label fx:id="lbInicioSesion" prefHeight="16.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label style="-fx-font-weight: bold;" text="Hora de Fin:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Label fx:id="lbFinSesion" prefHeight="16.0" prefWidth="176.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label style="-fx-font-weight: bold;" text="Minutos:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label fx:id="lbMinutos" prefHeight="16.0" prefWidth="180.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="352.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="352.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="352.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="352.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Button fx:id="btBorrar" mnemonicParsing="false" onAction="#borrar" text="Borrar" />
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

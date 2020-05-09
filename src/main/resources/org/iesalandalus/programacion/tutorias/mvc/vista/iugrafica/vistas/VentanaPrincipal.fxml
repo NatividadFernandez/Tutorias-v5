@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="900.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorVentanaPrincipal">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca De ..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" prefHeight="310.0" prefWidth="900.0" spacing="30.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Profesores">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/profesores.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <content>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="242.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btListarProfesores" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarProfesores" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoListar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btAnadirProfesor" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirProfesor" prefHeight="50.0" prefWidth="130.0" text="Añadir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoAnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBuscarProfesor" mnemonicParsing="false" onAction="#buscarProfesor" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBuscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBorrarProfesor" mnemonicParsing="false" onAction="#borrarProfesor" prefHeight="50.0" prefWidth="130.0" text="Borrar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBorrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Alumnos">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="242.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btListarAlumnos" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarAlumnos" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoListar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btAnadirAlumno" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirAlumno" prefHeight="50.0" prefWidth="130.0" text="Añadir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoAnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBuscarAlumno" mnemonicParsing="false" onAction="#buscarAlumno" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBuscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBorrarAlumno" mnemonicParsing="false" onAction="#borrarAlumno" prefHeight="50.0" prefWidth="130.0" text="Borrar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBorrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/alumnos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+            <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Tutorías">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="242.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btListarTutorias" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarTutorias" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoListar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btAnadirTutoria" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirTutoria" prefHeight="50.0" prefWidth="130.0" text="Añadir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoAnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBuscarTutoria" mnemonicParsing="false" onAction="#buscarTutoria" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBuscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBorrarTutoria" mnemonicParsing="false" onAction="#borrarTutoria" prefHeight="50.0" prefWidth="130.0" text="Borrar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBorrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/tutorias.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="317.0" prefWidth="900.0" spacing="30.0">
+         <children>
+            <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Sesiones">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="242.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btListarSesiones" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarSesiones" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoListar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btAnadirSesion" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirSesion" prefHeight="50.0" prefWidth="130.0" text="Añadir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoAnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBuscarSesion" mnemonicParsing="false" onAction="#buscarSesion" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBuscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBorrarSesion" mnemonicParsing="false" onAction="#borrarSesion" prefHeight="50.0" prefWidth="130.0" text="Borrar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBorrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/sesiones.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+            <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Citas">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="320.0" prefWidth="242.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btListarCitas" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarCitas" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoListar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btAnadirCita" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirCita" prefHeight="50.0" prefWidth="130.0" text="Añadir">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoAnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBuscarCita" mnemonicParsing="false" onAction="#buscarCita" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBuscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btBorrarCita" mnemonicParsing="false" onAction="#borrarCita" prefHeight="50.0" prefWidth="130.0" text="Borrar">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/iconoBorrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/citas.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="531.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorBuscarTutoria">
+   <children>
+      <GridPane alignment="CENTER" hgap="10.0" prefHeight="319.0" prefWidth="491.0" vgap="10.0">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Profesores" GridPane.halignment="CENTER" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Nombre Tutoría" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="tfNombreTutoria" prefHeight="26.0" prefWidth="157.0" GridPane.rowIndex="3" />
+            <TableView fx:id="tvProfesores" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="tcNombreProfesor" prefWidth="148.0" text="Nombre" />
+                  <TableColumn fx:id="tcDni" prefWidth="150.0" text="DNI" />
+                  <TableColumn fx:id="tcCorreo" prefWidth="138.0" text="Correo" />
+               </columns>
+            </TableView>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="437.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints maxHeight="95.0" minHeight="7.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="173.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="64.0" prefWidth="451.0" spacing="30.0">
+         <children>
+            <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#buscarTutoria" text="Aceptar" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

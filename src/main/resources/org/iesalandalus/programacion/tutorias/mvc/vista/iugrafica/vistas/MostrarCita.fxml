@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="800.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorMostrarCita">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <GridPane hgap="10.0" prefHeight="481.0" prefWidth="400.0" vgap="10.0">
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Tutoría" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="lbNombreTutoria" style="-fx-font-weight: bold;" text="Nombre Tutoría:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Label fx:id="lbNombreTutoria" prefHeight="37.0" prefWidth="352.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="lbFecha" prefHeight="53.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Sesión" GridPane.columnIndex="3" />
+            <Label style="-fx-font-weight: bold;" text="Hora de Fin:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label fx:id="lbFinSesion" prefHeight="61.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label style="-fx-font-weight: bold;" text="Fecha:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label style="-fx-font-weight: bold;" text="Hora de Inicio:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label fx:id="lbInicioSesion" prefHeight="39.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label style="-fx-font-weight: bold;" text="Minutos:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Label fx:id="lbMinutos" prefHeight="46.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Profesor" GridPane.columnIndex="1" />
+            <Label style="-fx-font-weight: bold;" text="Nombre Profesor:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Label style="-fx-font-weight: bold;" text="DNI:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label style="-fx-font-weight: bold;" text="Correo:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label fx:id="lbNombreProfesor" prefHeight="44.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lbDni" prefHeight="50.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lbCorreo" prefHeight="46.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Alumno" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label style="-fx-font-weight: bold;" text="Nombre Alumno:" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Label fx:id="lbNombreAlumno" prefHeight="36.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label style="-fx-font-weight: bold;" text="Correo:" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Cita" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label style="-fx-font-weight: bold;" text="Hora:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <Label fx:id="lbCorreoProfesor" prefHeight="57.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lbHoraCita" prefHeight="45.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label fx:id="lbCorreoAlumno" prefHeight="49.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label style="-fx-font-weight: bold;" text="Expediente:" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+            <Label fx:id="lbExpediente" prefHeight="63.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="177.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="251.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="190.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="232.0" />
+         </columnConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

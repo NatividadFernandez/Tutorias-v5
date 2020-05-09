@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="565.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorListarSesiones">
+   <children>
+      <GridPane alignment="CENTER" hgap="10.0" prefHeight="513.0" prefWidth="505.0" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="212.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="169.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Listar Sesiones por Tutorias" GridPane.halignment="CENTER" />
+            <TableView fx:id="tvTutorias" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+              <columns>
+                  <TableColumn fx:id="tcTutoria" prefWidth="139.0" text="Tutoria" />
+                  <TableColumn fx:id="tcNombreProfesor" prefWidth="129.0" text="Profesor" />
+                  <TableColumn fx:id="tcDni" prefWidth="110.0" text="DNI" />
+                  <TableColumn fx:id="tcCorreo" prefWidth="126.0" text="Correo" />
+              </columns>
+            </TableView>
+            <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Sesiones" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TableView fx:id="tvSesiones" prefHeight="154.0" prefWidth="220.0" GridPane.rowIndex="3">
+               <columns>
+                  <TableColumn fx:id="tcFecha" prefWidth="147.0" text="Fecha" />
+                  <TableColumn fx:id="tcInicioSesion" prefWidth="134.0" text="Hora Inicio" />
+                  <TableColumn fx:id="tcFinSesion" prefWidth="133.0" text="Hora Fin" />
+                  <TableColumn fx:id="tcMinutos" prefWidth="90.0" text="Minutos" />
+               </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+            <Button fx:id="btMostrarTodo" mnemonicParsing="false" onAction="#mostrarSesiones" text="Listar todas las sesiones">
+               <tooltip>
+                  <Tooltip text="Listará todas las sesiones de nuevo." />
+               </tooltip>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

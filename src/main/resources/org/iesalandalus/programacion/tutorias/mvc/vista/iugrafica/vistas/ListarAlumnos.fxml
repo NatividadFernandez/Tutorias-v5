@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="520.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorListarAlumnos">
+   <children>
+      <Label style="-fx-font-size: 25;" text="Alumnos" />
+      <TableView fx:id="tvAlumnos" prefHeight="200.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="tcNombre" prefWidth="180.0" text="Nombre" />
+            <TableColumn fx:id="tcCorreo" prefWidth="164.0" text="Correo" />
+            <TableColumn fx:id="tcExpediente" prefWidth="135.0" text="Expediente" />
+         </columns>
+      </TableView>
+      <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

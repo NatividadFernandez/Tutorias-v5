@@ -28,7 +28,5 @@ Por tanto, tu tarea va a consistir en completar los siguientes apartados:
 - El nombre de las variables debe ser adecuado.
 - Se debe utilizar la clase `Entrada` para realizar la entrada por teclado.
 - El proyecto debe pasar todas las pruebas que van en el esqueleto del mismo y toda entrada del programa será validada para evitar que el programa termine abruptamente debido a una excepción.
-- Se valorará la corrección ortográfica tanto en los comentarios como en los mensajes que se muestren al usuario.
-"# Tutorias-v4"  
-"# Tutorias-v4"  
+- Se valorará la corrección ortográfica tanto en los comentarios como en los mensajes que se muestren al usuario. 
 "# Tutorias-v5"  

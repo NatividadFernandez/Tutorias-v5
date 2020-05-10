@@ -3,8 +3,6 @@ package org.iesalandalus.programacion.tutorias.mvc.modelo.dominio;
 import java.io.Serializable;
 import java.util.Objects;
 
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.ficheros.Alumnos;
-
 public class Alumno implements Serializable {
 
 	private static final String ER_NOMBRE = "(?=.*\\s.+)(?![a-zA-Zñáéíóúü]\\s)(?!.*\\s[a-zA-Zñáéíóúü]\\s)(?!.*\\s[a-zA-Zñáéíóúü]$).[a-zA-Zñáéíóúü\\s]+";
@@ -19,8 +17,15 @@ public class Alumno implements Serializable {
 	public Alumno(String nombre, String correo) {
 		setNombre(nombre);
 		setCorreo(correo);
-		incremientaUltimoIdentificador();
 		setExpediente();
+
+	}
+
+	// Constructor con parámetros
+	public Alumno(String nombre, String correo, int identificador) {
+		setNombre(nombre);
+		setCorreo(correo);
+		setExpediente(identificador);
 
 	}
 
@@ -33,10 +38,6 @@ public class Alumno implements Serializable {
 		setCorreo(alumno.getCorreo());
 		this.expediente = alumno.getExpediente();
 
-	}
-
-	public void comprobarUltimoIdentificador() {
-		incremientaUltimoIdentificador();
 	}
 
 	// Alumno ficticio
@@ -89,7 +90,15 @@ public class Alumno implements Serializable {
 	}
 
 	private void setExpediente() {
+		incremientaUltimoIdentificador();
 		this.expediente = PREFIJO_EXPEDIENTE + getIniciales() + "_" + ultimoIdentificador;
+	}
+
+	private void setExpediente(int identificador) {
+		if (identificador <= 0) {
+			throw new NullPointerException("ERROR: El identificador debe ser mayor que cero.");
+		}
+		this.expediente = PREFIJO_EXPEDIENTE + getIniciales() + "_" + identificador;
 	}
 
 	// Formateamos el nombre
